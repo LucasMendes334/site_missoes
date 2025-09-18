@@ -40,7 +40,7 @@
       justify-content: space-between;
       padding: 0 20px;
       z-index: 1200;
-      background: rgba(12,12,12,0.08);
+      background: rgba(12,12,12,0.2);
       backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--glass-border);
     }
@@ -135,6 +135,19 @@
       header { background: rgba(12,12,12,0.5); }
       .sidebar { background: rgba(12,12,12,0.5); }
     }
+
+    .aventureiro-card img {
+      width: 264px;
+      height: 264px;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .aventureiro-card img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body class="bg-[var(--cor-pedra-clara)] text-[var(--cor-escuro)] font-sans">
@@ -146,10 +159,11 @@
       <h1 class="text-2xl font-bold text-white">Cidade do Espantalho</h1>
     </div>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="#aventureiros">Aventureiros</a>
-      <a href="#missoes">Missões</a>
-      <a href="#exploracoes">Explorações</a>
-      <a href="#conquistas">Conquistas</a>
+      <a href="prefeitura.html">Prefeitura</a>
+      <a href="casa_da_moeda.html">Casa da moeda</a>
+      <a href="jornal.html">Jornal</a>
+      <a href="producao.html">Produção</a>
+      <a href="mercadao.html">Mercadão</a>
     </nav>
   </header>
 
@@ -157,10 +171,11 @@
   <aside id="sidebar" class="sidebar" aria-hidden="true">
     <h3>Menu</h3>
     <button class="btn-close" aria-label="Fechar menu">✕</button>
-    <a href="#aventureiros">📜 Aventureiros</a>
-    <a href="#missoes">📋 Missões</a>
-    <a href="#exploracoes">🗺️ Explorações</a>
-    <a href="#conquistas">🏆 Conquistas</a>
+    <a href="prefeitura.html">Prefeitura</a>
+    <a href="casa_da_moeda.html">📋 Casa da moeda</a>
+    <a href="jornal.html">🏆 Jornal</a>
+    <a href="producao.html">🗺️ Produção</a>
+    <a href="mercadao.htm">🏆 Mercadão</a>
   </aside>
 
   <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
@@ -176,30 +191,40 @@
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-12 text-[var(--cor-escuro)]">Aventureiros</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-lg text-left border-t-4 border-[var(--cor-telhado)]">
-          <h3 class="text-2xl font-semibold mb-2 text-[var(--cor-telhado-escuro)]">Líder do Centro de Operações</h3>
-          <p class="text-lg font-bold">Lucas Mendes</p>
-          <p class="text-gray-700 mt-2">Responsável por organizar as tarefas atribuídas ao centro de operações e distribuir as tarefas entre os membros.</p>
+        <!-- Top Row -->
+        <div class="aventureiro-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--cor-telhado)]">
+          <a href="perfil_mendes.html">
+            <img src="imagens/boneco_mendes_264.png" alt="Lucas Mendes" class="rounded-t-xl mb-4">
+          </a>
+          <p class="text-lg font-bold text-center">Lucas Mendes</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-left border-t-4 border-[var(--cor-verde)]">
-          <h3 class="text-2xl font-semibold mb-2 text-[var(--cor-verde)]">Membro</h3>
-          <p class="text-lg font-bold">Guilherme Leitão</p>
-          <p class="text-gray-700 mt-2">Responsável pelas tarefas que o líder atribuir a ele.</p>
+        <div class="aventureiro-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--cor-verde)]">
+          <a href="perfil-guilherme-leitao.html">
+            <img src="imagens/guilherme-leitao.png" alt="Guilherme Leitão" class="rounded-t-xl mb-4">
+          </a>
+          <p class="text-lg font-bold text-center">Guilherme Leitão</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-left border-t-4 border-[var(--cor-telhado)]">
-          <h3 class="text-2xl font-semibold mb-2 text-[var(--cor-telhado-escuro)]">Membro</h3>
-          <p class="text-lg font-bold">Lucas Souza</p>
-          <p class="text-gray-700 mt-2">Responsável pelas tarefas que o líder atribuir a ele.</p>
+        <!-- Bottom Row -->
+        <div class="aventureiro-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--cor-telhado)]">
+          <a href="perfil-lucas-souza.html">
+            <img src="imagens/lucas-souza.png" alt="Lucas Souza" class="rounded-t-xl mb-4">
+          </a>
+          <p class="text-lg font-bold text-center">Lucas Souza</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-left border-t-4 border-[var(--cor-verde)]">
-          <h3 class="text-2xl font-semibold mb-2 text-[var(--cor-verde)]">Membro</h3>
-          <p class="text-lg font-bold">Raika Oliveira</p>
-          <p class="text-gray-700 mt-2">Responsável pelas tarefas que o líder atribuir a ele.</p>
+        <div class="aventureiro-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--cor-verde)]">
+          <a href="perfil-raika-oliveira.html">
+            <img src="imagens/raika-oliveira.png" alt="Raika Oliveira" class="rounded-t-xl mb-4">
+          </a>
+          <p class="text-lg font-bold text-center">Raika Oliveira</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg text-left border-t-4 border-[var(--cor-telhado)]">
-          <h3 class="text-2xl font-semibold mb-2 text-[var(--cor-telhado-escuro)]">Membro</h3>
-          <p class="text-lg font-bold">Richard Oliveira</p>
-          <p class="text-gray-700 mt-2">Responsável pelas tarefas que o líder atribuir a ele.</p>
+      </div>
+      <!-- Richard Centered Below -->
+      <div class="mt-8 flex justify-center">
+        <div class="aventureiro-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-[var(--cor-telhado)] w-full md:w-1/2">
+          <a href="perfil-richard-oliveira.html">
+            <img src="imagens/richard-oliveira.png" alt="Richard Oliveira" class="rounded-t-xl mb-4">
+          </a>
+          <p class="text-lg font-bold text-center">Richard Oliveira</p>
         </div>
       </div>
     </div>
@@ -209,10 +234,15 @@
   <section id="missoes" class="py-16 bg-[var(--cor-pedra)]">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-12 text-center text-[var(--cor-escuro)]">Missões</h2>
+      <div class="text-center mb-8 space-x-4">
+        <button id="showFinais" class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 rounded-lg shadow hover:bg-[var(--cor-telhado)]">Missões Finais</button>
+        <button id="showPrincipais" class="bg-[var(--cor-telhado)] text-white px-6 py-3 rounded-lg shadow hover:bg-[var(--cor-telhado-escuro)]">Missões Principais</button>
+        <button id="showBonus" class="bg-[var(--cor-verde)] text-white px-6 py-3 rounded-lg shadow hover:bg-green-900">Missões Bonus</button>
+      </div>
       <div id="quadro" class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- NOVA MISSÃO -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Missão semanal parte 1">
-          <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
+        <!-- Missões Principais -->
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado)] missao-principal" data-missao="Missão semanal parte 1">
+          <div class="bg-[var(--cor-telhado)] text-white px-6 py-3 font-bold text-xl">
             Missão semanal parte 1 — Perfil do Aventureiro
           </div>
           <div class="p-8">
@@ -221,9 +251,8 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Artificer e Mago">
-          <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado)] missao-principal" data-missao="Artificer e Mago">
+          <div class="bg-[var(--cor-telhado)] text-white px-6 py-3 font-bold text-xl">
             Artificer e Mago — O Arquiteto da Cidade
           </div>
           <div class="p-8">
@@ -232,9 +261,8 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Vermelho -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)]" data-missao="Cavaleiro">
-          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado)] missao-principal" data-missao="Cavaleiro">
+          <div class="bg-[var(--cor-telhado)] text-white px-6 py-3 font-bold text-xl">
             Cavaleiro — Colocando Ordem
           </div>
           <div class="p-8">
@@ -243,9 +271,8 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Vermelho -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)]" data-missao="Mercador">
-          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado)] missao-principal" data-missao="Mercador">
+          <div class="bg-[var(--cor-telhado)] text-white px-6 py-3 font-bold text-xl">
             Mercador — Potência
           </div>
           <div class="p-8">
@@ -254,9 +281,8 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Herói">
-          <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado)] missao-principal" data-missao="Herói">
+          <div class="bg-[var(--cor-telhado)] text-white px-6 py-3 font-bold text-xl">
             Herói — Inquebrável
           </div>
           <div class="p-8">
@@ -265,8 +291,9 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Artificer Bonus Nossas Honras">
+
+        <!-- Missões Bonus -->
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Artificer Bonus Nossas Honras">
           <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Artificer Bonus — Nossas Honras
           </div>
@@ -277,8 +304,7 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Artificer Bonus Comemoração">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Artificer Bonus Comemoração">
           <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Artificer Bonus — Comemoração
           </div>
@@ -289,9 +315,8 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Vermelho -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)]" data-missao="Cavaleiro Bonus Elo dos Pedidos">
-          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Cavaleiro Bonus Elo dos Pedidos">
+          <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Cavaleiro Bonus — Elo dos Pedidos
           </div>
           <div class="p-8">
@@ -301,8 +326,7 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Mago Bonus Estudo Dirigido das Normas">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Mago Bonus Estudo Dirigido das Normas">
           <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Mago Bonus — Estudo Dirigido das Normas
           </div>
@@ -314,8 +338,7 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Mago Bonus A Obra do Git">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Mago Bonus A Obra do Git">
           <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Mago Bonus — A Obra do Git
           </div>
@@ -326,8 +349,7 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
-        <!-- Verde -->
-        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)]" data-missao="Mercador Bonus Seu Grande Leilão">
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-verde)] missao-bonus" data-missao="Mercador Bonus Seu Grande Leilão">
           <div class="bg-[var(--cor-verde)] text-white px-6 py-3 font-bold text-xl">
             Mercador Bonus — Seu Grande Leilão
           </div>
@@ -338,6 +360,151 @@
             <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
           </div>
         </div>
+
+        <!-- Missões Finais -->
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Artificer Retrato do Chefe Final">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Artificer — Retrato do Chefe Final
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa</p>
+            <p class="text-gray-700">Fazer uma imagem do chefe final e colocar no site mostrando a vida e os ataques.</p>
+            <p class="text-gray-700"><strong>Recompensa:</strong> Só ganha um nível</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Artificer Maquete do Chefe">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Artificer — Maquete do Chefe
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa</p>
+            <p class="text-gray-700">Fazer uma maquete do chefe.</p>
+            <p class="text-gray-700"><strong>Recompensa:</strong> Só ganha um nível</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Artificer Encarnar o Chefe">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Artificer — Encarnar o Chefe
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa</p>
+            <p class="text-gray-700">Fazer com quem for apresentar o chefe na batalha esteja a caráter vestido como o chefe.</p>
+            <p class="text-gray-700"><strong>Recompensa:</strong> Só ganha um nível</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Cavaleiro Site de Batalha em Tempo Real">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Cavaleiro — Site de Batalha em Tempo Real
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa (tarefas exclusivas, 1 por pessoa – até 4 pessoas no total para Cavaleiro)</p>
+            <p class="text-gray-700">Criar um site onde todos que estão lutando possam registrar o dano e aparecer o resultado em tempo real.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Cavaleiro Fichas de Personagem">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Cavaleiro — Fichas de Personagem
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa (tarefas exclusivas, 1 por pessoa – até 4 pessoas no total para Cavaleiro)</p>
+            <p class="text-gray-700">Garantir que todos os membros do grupo tenham a página do personagem (não dá nível).</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Cavaleiro Auditoria de Usabilidade">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Cavaleiro — Auditoria de Usabilidade
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 1 pessoa (tarefas exclusivas, 1 por pessoa – até 4 pessoas no total para Cavaleiro)</p>
+            <p class="text-gray-700">Fazer pesquisa sobre o site para avaliar navegabilidade, usabilidade e acessibilidade, visando melhorias.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mago Harmonia">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mago — Harmonia
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> Todos</p>
+            <p class="text-gray-700">Reunir todas as páginas em um único lugar (sem nível).</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mago Preparação do TCC">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mago — Preparação do TCC
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> Todos</p>
+            <p class="text-gray-700">Criar uma página do seu TCC com tudo que foi feito até aqui, relacionada ao site.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mago O Livro">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mago — O Livro
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> No máximo duas pessoas</p>
+            <p class="text-gray-700">Fazer a apresentação do livro (no máximo duas pessoas) → cada dupla que apresentar deixa o chefe mais forte.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mercador Alianças Docentes">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mercador — Alianças Docentes
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 3 pessoas</p>
+            <p class="text-gray-700">Convencer 3 professores a apoiarem o seu lado (3 pessoas ganham nível).</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mercador Todos Equipados">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mercador — Todos Equipados
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> Todos</p>
+            <p class="text-gray-700">Garantir que todos os membros tenham armas que atinjam todos os números (não dá nível).</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mercador Riqueza Absoluta">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mercador — Riqueza Absoluta
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> 3 pessoas</p>
+            <p class="text-gray-700">O lado com mais dinheiro ganha → distribuir o nível entre 3 pessoas.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Mercador Troca Justa">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Mercador — Troca Justa
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> Todos</p>
+            <p class="text-gray-700">Trocar 3 itens → sobe nível.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
+        <div class="bg-[var(--cor-pedra-clara)] rounded-2xl shadow-xl border border-[var(--cor-telhado-escuro)] missao-final" data-missao="Herói Auxílio do Herói">
+          <div class="bg-[var(--cor-telhado-escuro)] text-white px-6 py-3 font-bold text-xl">
+            Herói — Auxílio do Herói
+          </div>
+          <div class="p-8">
+            <p class="text-gray-700 mb-2"><strong>Participantes:</strong> Herói e todo o seu lado</p>
+            <p class="text-gray-700">O herói e todo o seu lado precisam ajudar quem não está conseguindo terminar sua parte do site. A pessoa ajudada assina o papel. Essa assinatura vale por duas pessoas.</p>
+            <ul class="participantes list-disc pl-6 text-gray-700 mt-4"></ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -345,7 +512,6 @@
   <!-- FORMULÁRIOS -->
   <section class="py-16 bg-[var(--cor-pedra-clara)]">
     <div class="max-w-4xl mx-auto px-6 space-y-10">
-      <!-- Formulário -->
       <div class="bg-white p-8 rounded-2xl shadow-lg border border-[var(--cor-pedra)]">
         <h3 class="text-2xl font-semibold mb-4 text-[var(--cor-telhado-escuro)]">Entrar em uma Missão</h3>
         <div class="space-y-4">
@@ -363,15 +529,27 @@
             <option value="Mago Bonus A Obra do Git">Mago Bonus: A Obra do Git</option>
             <option value="Mercador Bonus Seu Grande Leilão">Mercador Bonus: Seu Grande Leilão</option>
             <option value="Missão semanal parte 1">Missão semanal parte 1: Perfil do Aventureiro</option>
+            <option value="Artificer Retrato do Chefe Final">Artificer: Retrato do Chefe Final</option>
+            <option value="Artificer Maquete do Chefe">Artificer: Maquete do Chefe</option>
+            <option value="Artificer Encarnar o Chefe">Artificer: Encarnar o Chefe</option>
+            <option value="Cavaleiro Site de Batalha em Tempo Real">Cavaleiro: Site de Batalha em Tempo Real</option>
+            <option value="Cavaleiro Fichas de Personagem">Cavaleiro: Fichas de Personagem</option>
+            <option value="Cavaleiro Auditoria de Usabilidade">Cavaleiro: Auditoria de Usabilidade</option>
+            <option value="Mago Harmonia">Mago: Harmonia</option>
+            <option value="Mago Preparação do TCC">Mago: Preparação do TCC</option>
+            <option value="Mago O Livro">Mago: O Livro</option>
+            <option value="Mercador Alianças Docentes">Mercador: Alianças Docentes</option>
+            <option value="Mercador Todos Equipados">Mercador: Todos Equipados</option>
+            <option value="Mercador Riqueza Absoluta">Mercador: Riqueza Absoluta</option>
+            <option value="Mercador Troca Justa">Mercador: Troca Justa</option>
+            <option value="Herói Auxílio do Herói">Herói: Auxílio do Herói</option>
           </select>
           <button id="submitMissao" class="bg-[var(--cor-telhado)] text-white px-6 py-3 rounded-lg shadow hover:bg-[var(--cor-telhado-escuro)]">Participar</button>
         </div>
       </div>
-      <!-- Botão Resetar -->
       <div class="text-center">
         <button id="resetar" class="bg-[var(--cor-verde)] text-white px-6 py-3 rounded-lg shadow hover:bg-green-900">Resetar Todas as Missões</button>
       </div>
-      <!-- Sugestões -->
       <div class="bg-white p-8 rounded-2xl shadow-lg border border-[var(--cor-pedra)]">
         <h3 class="text-2xl font-semibold mb-4 text-[var(--cor-telhado-escuro)]">Sugerir Nova Missão</h3>
         <div class="space-y-4">
@@ -475,6 +653,25 @@
         el.style.borderColor = "";
       });
     };
+
+    // Filtro de Missões
+    const showPrincipais = document.getElementById('showPrincipais');
+    const showBonus = document.getElementById('showBonus');
+    const showFinais = document.getElementById('showFinais');
+    const allMissoes = document.querySelectorAll('#quadro > div');
+
+    function filterMissoes(category) {
+      allMissoes.forEach(missao => {
+        missao.style.display = missao.classList.contains(category) ? 'block' : 'none';
+      });
+    }
+
+    showPrincipais.addEventListener('click', () => filterMissoes('missao-principal'));
+    showBonus.addEventListener('click', () => filterMissoes('missao-bonus'));
+    showFinais.addEventListener('click', () => filterMissoes('missao-final'));
+
+    // Mostrar principais por default
+    filterMissoes('missao-principal');
 
     // Formulários
     const formMissao = document.getElementById("formMissao");
